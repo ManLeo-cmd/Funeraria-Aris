@@ -5,10 +5,10 @@ import com.mx.funeraria.services.ClientesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-// REST -> XML JSON ...
 @RestController
 @RequestMapping("clientes")
 public class ClientesController {
+
 
     @Autowired
     private ClientesService clientesService;
@@ -16,6 +16,14 @@ public class ClientesController {
     @GetMapping("/listar")
     public ResponseEntity<?> findAll(){
         return ResponseEntity.status(200).body(clientesService.listarClientes());
+    }
+
+    @PostMapping("/admin")
+    public ResponseEntity<?> findByEmailAndIsAdmin(@RequestBody String email){
+        if (clientesService.buscarClientePorEmail(email) == null){
+            return ResponseEntity.status(500).build();
+        }
+        return ResponseEntity.status(200).body(clientesService.buscarClientePorEmail(email).isAdmin());
     }
 
     @GetMapping("/buscar/{id}")
@@ -55,7 +63,5 @@ public class ClientesController {
         return ResponseEntity.status(200).build();
 
     }
-
-    // M - C
 
 }

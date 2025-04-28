@@ -11,7 +11,6 @@ public class Facturacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_factura;
 
-
     private double total;
 
     private Date fechaEmision;
@@ -21,6 +20,10 @@ public class Facturacion {
     @ManyToOne
     @JoinColumn(name = "id_cliente")
     private Clientes cliente;
+
+
+    @OneToOne(mappedBy = "factura")
+    private ServicioInmediato servicioInmediato;
 
 
     public int getId_factura() {

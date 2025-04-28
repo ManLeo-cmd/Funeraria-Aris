@@ -9,6 +9,7 @@ public class PlanesFuturos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_plan")
     private int id_plan;
 
     private String nombre;
@@ -16,6 +17,8 @@ public class PlanesFuturos {
     private double costo;
 
     private int mensualidades;
+
+    private int mesesPagados;
 
     private double saldoRestante;
 
@@ -25,6 +28,11 @@ public class PlanesFuturos {
 
     @OneToMany(mappedBy = "planes")
     private List<Recordatorios> recordatorios;
+
+    @OneToMany(mappedBy = "planes",orphanRemoval = true, cascade = CascadeType.ALL)
+    private List<PagoPlanes> pagos;
+
+
 
     public int getId_plan() {
         return id_plan;
@@ -72,5 +80,13 @@ public class PlanesFuturos {
 
     public void setCliente(Clientes cliente) {
         this.cliente = cliente;
+    }
+
+    public int getMesesPagados() {
+        return mesesPagados;
+    }
+
+    public void setMesesPagados(int mesesPagados) {
+        this.mesesPagados = mesesPagados;
     }
 }

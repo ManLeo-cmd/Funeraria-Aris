@@ -2,7 +2,9 @@ package com.mx.funeraria.services;
 
 import com.mx.funeraria.dao.FacturacionDAO;
 import com.mx.funeraria.dao.RecordatoriosDAO;
+import com.mx.funeraria.entidades.Clientes;
 import com.mx.funeraria.entidades.Facturacion;
+import com.mx.funeraria.entidades.PlanesFuturos;
 import com.mx.funeraria.entidades.Recordatorios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,4 +33,11 @@ public class RecordatoriosService {
         recordatoriosDAO.delete(recordatorios);
     }
 
+    public List<Recordatorios> buscarPorCliente(Clientes clientes){
+        return recordatoriosDAO.findByCliente(clientes);
+    }
+
+    public List<Recordatorios> buscarPorPlan(PlanesFuturos planesFuturos){
+        return recordatoriosDAO.findByPlanes(planesFuturos);
+    }
 }

@@ -22,6 +22,7 @@ public class PersonalizacionServService {
     }
 
     public void guardarPersonalizacionServicios(PersonalizacionServicios clientes){
+        System.out.println(clientes);
         personalizacionDAO.save(clientes);
     }
 

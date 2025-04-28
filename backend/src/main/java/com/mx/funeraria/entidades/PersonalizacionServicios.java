@@ -23,6 +23,7 @@ public class PersonalizacionServicios {
     @JoinColumn(name = "id_cliente")
     private Clientes cliente;
 
+
     public int getId_personalizacion() {
         return id_personalizacion;
     }

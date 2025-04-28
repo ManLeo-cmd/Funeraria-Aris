@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+
 @Entity
 public class Clientes {
 
@@ -11,15 +12,17 @@ public class Clientes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String nombre; //
+    private String nombre;
 
     private long telefono;
 
-    private String email; //
+    private String email;
 
-    private String contrasena; //
+    private String contrasena;
 
     private String direccion;
+
+    private boolean isAdmin;
 
     @OneToMany(mappedBy = "cliente")
     private List<PersonalizacionServicios> productos;
@@ -32,6 +35,9 @@ public class Clientes {
 
     @OneToMany(mappedBy = "cliente")
     private List<Recordatorios> recordatorios;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<ServicioInmediato> servicioInmediato;
 
     public int getId() {
         return id;
@@ -81,36 +87,12 @@ public class Clientes {
         this.direccion = direccion;
     }
 
-    public List<PersonalizacionServicios> getProductos() {
-        return productos;
+    public boolean isAdmin() {
+        return isAdmin;
     }
 
-    public void setProductos(List<PersonalizacionServicios> productos) {
-        this.productos = productos;
-    }
-
-    public List<PlanesFuturos> getPlanes() {
-        return planes;
-    }
-
-    public void setPlanes(List<PlanesFuturos> planes) {
-        this.planes = planes;
-    }
-
-    public List<Facturacion> getFacturacion() {
-        return facturacion;
-    }
-
-    public void setFacturacion(List<Facturacion> facturacion) {
-        this.facturacion = facturacion;
-    }
-
-    public List<Recordatorios> getRecordatorios() {
-        return recordatorios;
-    }
-
-    public void setRecordatorios(List<Recordatorios> recordatorios) {
-        this.recordatorios = recordatorios;
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 
     @Override
@@ -120,7 +102,6 @@ public class Clientes {
                 ", nombre='" + nombre + '\'' +
                 ", telefono=" + telefono +
                 ", email='" + email + '\'' +
-                ", contrasena='" + contrasena + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", productos=" + productos +
                 ", planes=" + planes +

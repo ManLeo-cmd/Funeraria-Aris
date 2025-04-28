@@ -1,5 +1,6 @@
 package com.mx.funeraria.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -17,6 +18,7 @@ public class Recordatorios {
 
     @ManyToOne
     @JoinColumn(name = "id_cliente")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Clientes cliente;
 
     @ManyToOne
@@ -62,4 +64,15 @@ public class Recordatorios {
     public void setPlanes(PlanesFuturos planes) {
         this.planes = planes;
     }
+
+    @Override
+    public String toString() {
+        return "Recordatorios{" +
+                "fechaEnvio=" + fechaEnvio +
+                ", estadoEnvio='" + estadoEnvio + '\'' +
+                ", id_recordatorio=" + id_recordatorio +
+                '}';
+    }
 }
+
+
