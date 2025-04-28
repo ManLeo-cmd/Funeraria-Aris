@@ -1,0 +1,17 @@
+<div class="row w">
+    <div class="col-10">
+        <div class="card ks">
+            <div class="card-body">
+                <form>
+                    <label for="email">EMAIL:</label>
+                    <input type="text" name="email" class="form-control" [(ngModel)]="reqs.email">
+                    <br>
+                    <label for="contrasena">CONTRASEÑA:</label>
+                    <input type="password" name="contrasena" class="form-control" [(ngModel)]="reqs.password">
+                    <br>
+                </form>
+                <button class="btnx btnx-dark uuu" (click)="login(reqs)">ENTRAR</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="row color2 re xl">
+    <div class="col-sm-12"></div>
+    <div class="col-sm-12">
+        <nav class="navbar navbar-expand-lg p-0">
+            <button class="navbar-toggler m-4 position-relative" type="button" (click)="toggleCollapsed2()" data-toggle="collapse" aria-haspopup="true" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div [ngClass]="{'collapse': collapsed2, 'navbar-collapse': true}" class="row" id="navbarTogglerDemo01">
+                <div class="col-12 col-lg-8">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 k">
+                      <li class="nav-item p-3">
+                        <a class="nav-link" href="#/auth">
+                          <div class="row">
+                            <div class="col x">
+                              FUNERARIA G
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link" href="#/auth/servicios">
+                                <div class="row">
+                                    <div class="col x">
+                                        SERVICIOS
+                                      </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4 ff ff-1">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 k" >
+                      <li class="nav-item p-3" [hidden]="!admin">
+                        <a class="nav-link" href="#/auth/admin">
+                            <div class="row">
+                                <div class="col x">
+                                    ADMIN
+                                  </div>
+                            </div>
+                        </a>
+                    </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link" (click)="logout()" href="">
+                              <div class="row">
+                                <div class="col x">
+                                  CERRAR SESIÓN
+                                </div>
+                              </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

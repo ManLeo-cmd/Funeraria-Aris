@@ -1,0 +1,95 @@
+<div class="row">
+    <div class="col-7 oll offset-2">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <h4>DATOS DEL DIFUNTO</h4>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">NOMBRE: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="nom" [(ngModel)]="servInmed.nombre">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">EDAD: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="edad" [(ngModel)]="servInmed.edad">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">FECHA DEFUNCIÓN: </span>
+                        </div>
+                        <input type="date" class="form-control"  name="fechadef" [(ngModel)]="servInmed.fechaDefuncion">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">CAUSA DE MUERTE: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="causa" [(ngModel)]="servInmed.causaMuerte">
+                    </div>
+                    <div class="form-group">
+                        <select name="eq"  (ngModelChange)="change($event)" class="form-control hhg" [(ngModel)]="servInmed.tipoServicio">
+                            <option class="ox" value="null" disabled>SELECCIONE UNA OPCIÓN</option>
+                            <option class="ox" value="S1">PLAN 1</option>
+                            <option class="ox" value="S2">PLAN 2</option>
+                            <option class="ox" value="S3">PLAN 3</option>
+                            
+                        </select>
+                    </div> 
+                    <h4>DATOS DE LA CEREMONIA</h4>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">MÚSICA: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="musica" [(ngModel)]="person.musica">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">FLORES: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="flores" [(ngModel)]="person.flores">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">ATAÚD: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="ataud" [(ngModel)]="person.ataud">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">CARROZA: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="carr" [(ngModel)]="person.carroza">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">PANTEÓN: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="pant" [(ngModel)]="person.equipoPanteon">
+                    </div>
+                    <h4>FACTURACIÓN</h4>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">FECHA DE EMISIÓN: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="fechaEmi"  [(ngModel)]="fact.fechaEmision">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">DETALLES: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="det" [(ngModel)]="fact.detalles">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text hhg-2">TOTAL: </span>
+                        </div>
+                        <input type="text" class="form-control"  name="tot" [(ngModel)]="fact.total">
+                    </div>
+                    <button class="btnx btnx-dark" (click)="enviar()">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

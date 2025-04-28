@@ -1,0 +1,17 @@
+.w{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.card{
+    border-radius: 0px;
+}
+.card-body{
+    border-radius: 0px;
+}
+
+.form-control{
+    border-radius: 0;
+}

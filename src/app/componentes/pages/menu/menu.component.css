@@ -1,0 +1,34 @@
+
+
+.pz{
+    overflow-y: scroll;
+    height: 500px;
+
+}
+
+.pz::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll en Chrome, Safari y Edge */
+  }
+
+.pp::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll en Chrome, Safari y Edge */
+  }
+
+.pp{
+    overflow-y: scroll;
+    height: 470px;
+}
+
+.card{
+    background-color: transparent;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+}
+
+.mas{
+    text-transform: uppercase;
+}
+
+.row{
+    color: white;
+}

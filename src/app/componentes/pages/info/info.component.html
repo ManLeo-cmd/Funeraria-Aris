@@ -1,0 +1,58 @@
+<div class="row p-2">
+    <div class="col-6 oll">
+        @for (item of items; track $index) {
+            <div class="card">
+                <div class="card-body">
+                    <h2>PLAN A FUTURO {{$index + 1}}</h2>
+                    <h5>INCLUYE:</h5>
+                    <ul  style="text-transform: uppercase;">
+                        <li>{{ataud[$index]}}</li>
+                        <li>{{traslado[$index]}}</li>
+                        <li>embalsamamiento en caso de requerirlo</li>
+                        <li>certificado medico</li>
+                        <li>equipo de velación</li>
+                        @if (extras[$index] != null) {
+                            <li>{{extras[$index]}}</li>
+                        }
+                        @if (panteon[$index] != null) {
+                            <li>{{panteon[$index]}}</li>
+                        }
+                    </ul>
+                    <h5>PRECIO: $ {{precio[$index]}}</h5>
+                    <br>
+                </div>
+            </div>
+            <br>
+        }
+    </div>
+    <div class="col-6 oll">
+        @for (item of items; track $index) {
+            <div class="card">
+                <div class="card-body">
+                    <h2>SERVICIO INMEDIATO {{$index + 1}}</h2>
+                    <h5>INCLUYE:</h5>
+                    <ul  style="text-transform: uppercase;">
+                        <li>{{ataud[$index]}}</li>
+                        <li>rescate de cuerpo</li>
+                        <li>carroza</li>
+                        <li>embalsamamiento</li>
+                        <li>equipo de velación</li>
+                        @if (extras2[$index] != null) {
+                            <li>{{extras2[$index]}}</li>
+                        }
+                        @if (panteon[$index] != null) {
+                            <li>{{panteon[$index]}}</li>
+                        }
+                        @if (otros[$index] != null) {
+                            <li>{{otros[$index]}}</li>
+                        }
+                        
+                    </ul>
+                    <h5>PRECIO: $ {{precio2[$index]}}</h5>
+                    <br>
+                </div>
+            </div>
+            <br>
+        }
+    </div>
+</div>

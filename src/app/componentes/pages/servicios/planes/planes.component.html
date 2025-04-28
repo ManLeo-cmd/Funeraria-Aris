@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-8 oll offset-2">
+        @for (item of planes; track $index) {
+            <div class="card">
+                <div class="card body">
+                    <br>
+                    <h4>{{item.nombre}}</h4>
+                    <p>$ {{item.costo}}</p>
+                    <p>{{item.mensualidades}} MESES SIN INTERESES</p>
+                    <p>SALDO RESTANTE: {{item.saldoRestante}}</p>
+                    <button class="btnx btnx-dark" (click)="guardar(item, $index)">PAGAR MENSUALIDAD</button>
+                    <br>
+                    <div class="row" [hidden]="!show[$index]">
+                        <div class="col-12">
+                            <p>PAGOS RESTANTES: {{item.mensualidades - item.mesesPagados}}/{{item.mensualidades}}</p>
+                            <p>PAGOS MENSUALES: {{item.costo / item.mensualidades}}</p>
+                            <p>MENSUALIDAD A PAGAR: {{date[$index]}}</p>
+                            <button class="btnx btnx-dark" (click)="pagado(item)">PAGAR AHORA</button>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btnx btnx-danger" (click)="eliminar(item)">ELIMINAR</button>
+                    NOTA: sÓLO SE PUEDE ELIMINAR SI NO CUENTA CON NINGÚN PAGO REALIZADO
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+        }
+    </div>
+</div>

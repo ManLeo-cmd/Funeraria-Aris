@@ -1,0 +1,14 @@
+.ggg{
+    width: 100%;
+}
+
+.kks{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    top: 50%;
+}
+
+.ddd{
+    height: 76px;
+}

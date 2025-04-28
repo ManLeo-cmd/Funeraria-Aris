@@ -1,0 +1,22 @@
+.w{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.card{
+    background-color: transparent;
+    color: white;
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.7);
+}
+.card-body{
+    border-radius: 0px;
+}
+
+.form-control{
+    background-color: transparent;
+    color: white;
+}
+
+

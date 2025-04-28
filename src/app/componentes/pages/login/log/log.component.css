@@ -1,0 +1,12 @@
+.image{
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+        url('../../../../../../public/funeraria.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 89.2vh;
+    margin: 0;
+    
+}
+

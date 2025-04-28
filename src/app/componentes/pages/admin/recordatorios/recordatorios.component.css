@@ -1,0 +1,15 @@
+.card{
+    background-color: transparent;
+    color: white;
+}
+
+
+.oll{
+    height: 500px;
+    overflow-y: scroll;
+    
+}
+
+.oll::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll en Chrome, Safari y Edge */
+  }

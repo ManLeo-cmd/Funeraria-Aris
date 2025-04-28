@@ -1,0 +1,27 @@
+<div class="row w">
+    <div class="col-10">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <label for="name">NOMBRE:</label>
+                    <input type="text" name="name" class="form-control" [(ngModel)]="reqs.name">
+                    <br>
+                    <label for="email">EMAIL:</label>
+                    <input type="email" name="email" class="form-control" [(ngModel)]="reqs.email">
+                    <br>
+                    <label for="tel">TELÉFONO:</label>
+                    <input type="number" name="tel" class="form-control" [(ngModel)]="reqs.telefono">
+                    <br>
+                    <label for="dir">DIRECCIÓN:</label>
+                    <input type="text" name="dir" class="form-control" [(ngModel)]="reqs.direccion">
+                    <br>
+                    <label for="contrasena">CONTRASEÑA:</label>
+                    <input type="password" name="contrasena" class="form-control" [(ngModel)]="reqs.password">
+                    <br>
+
+                    <button class="btnx btnx-dark" (click)="register(reqs)">REGISTRARSE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
